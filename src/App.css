@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+:root {  
+  --main-darkred: #c00;
+  --main-red: #e30428;
+  --main-black: #1d1d1d;
+  --main-white: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* navbar */
+.navbar {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--main-black) !important;
+}
+.navbar a {
+  color: var(--main-white);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.logo {
+  width: 8rem;
+}
+.dropdown {  
+  margin: 0 1rem 0 1rem;
+}
+.dropdown-menu a {
+  color: var(--main-black);
+  display: block;
+  padding: 6px 20px;
+  transition: all .3s;
+  font-size: .9rem;
+}
+.dropdown-menu a:hover {
+  color: var(--main-red);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-toggle:hover {
+  color: var(--main-red);
+  transition: all .3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Icons */
+
+.icons {  
+  display: block;
+  float: left;
+  height: 37px;
+  width: 37px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pc-icon {
+  background: url(/src/components/icono-pcv2.png) center center no-repeat;
 }
-
-.App-link {
-  color: #61dafb;
+.ps-icon {
+  background: url(/src/components/icono-ps4v2.png) center center no-repeat;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch-icon {
+  background: url(/src/components/icono-switchv2.png) center center no-repeat;
+}
+.xbox-icon {
+  background: url(/src/components/icono-xbox.png) center center no-repeat;
 }
