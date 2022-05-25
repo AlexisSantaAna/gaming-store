@@ -1,62 +1,65 @@
-import React from 'react'
-import logo from './logo.png'
+import React from "react"
+import logo from "./logo.png"
+import "./navbar.css"
 
 function NavBar() {
     return (
-        <nav class="navbar navbar-expand-lg">
-            <div class="container navbar-container">
-                <a class="navbar-brand" href="#"><img class="img-fluid logo" src={logo} /></a>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                                <span class="pc-icon icons"></span>
+        <nav className="navbar navbar-expand-lg">
+            <div className="container navbar-container">
+                <div className="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                    <a className="navbar-brand" href="#"><img className="img-fluid logo" src={logo} /></a>
+                    <ul className="navbar-nav">
+                        <li className="dropdown">
+                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                                <span className="pc-icon icons"></span>
                                 Pc
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                            <span class="ps-icon icons"></span>
+                        <li className="dropdown">
+                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                                <span className="ps-icon icons"></span>
                                 Ps5
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                            <span class="xbox-icon icons"></span>
+                        <li className="dropdown">
+                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                                <span className="xbox-icon icons"></span>
                                 Xbox Series
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-                            <span class="switch-icon icons"></span>
+                        <li className="dropdown">
+                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                                <span className="switch-icon icons"></span>
                                 Switch
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li><a href="#">Action</a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                             </ul>
                         </li>
+
                     </ul>
+                    <a href="#" className="total-cart-container text-center"><i className="fas fa-shopping-cart fa-lg"></i><sup id="total-cart" className="h6"> 0</sup></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart"></i><sup id="total-cart"> 0</sup></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
             </div>
         </nav>

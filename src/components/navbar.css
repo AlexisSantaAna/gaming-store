@@ -1,0 +1,75 @@
+:root {  
+    --main-darkred: #c00;
+    --main-red: #e30428;
+    --main-black: #1d1d1d;
+    --main-white: #fff;
+  }
+  
+  /* navbar */
+  .navbar {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--main-black) !important;
+    padding: .3rem 0 .3rem 0;
+  }
+  .navbar-container ul li a {
+    display: block;
+    height: 100%;
+  }
+  .navbar a {
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .logo {
+    width: 8rem;
+  }
+  .dropdown {  
+    margin: 0 1rem 0 1rem;
+  }
+  .dropdown-menu a {
+    color: var(--main-black);
+    display: block;
+    padding: 6px 20px;
+    transition: all .3s;
+    font-size: .9rem;
+  }
+  .dropdown-menu a:hover {
+    color: var(--main-red);
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-toggle a {
+    margin-left: 4rem;
+  }
+  .dropdown-toggle:hover {
+    color: var(--main-red);
+    transition: all .3s;
+  }
+  
+  /* Icons */
+  
+  .icons {  
+    display: block;
+    float: left;
+    height: 37px;
+    width: 37px;
+    margin-right: .2rem;
+  }
+  
+  .pc-icon {
+    background: url(/src/components/icono-pcv2.png) center center no-repeat;
+  }
+  .ps-icon {
+    background: url(/src/components/icono-ps4v2.png) center center no-repeat;
+  }
+  .switch-icon {
+    background: url(/src/components/icono-switchv2.png) center center no-repeat;
+  }
+  .xbox-icon {
+    background: url(/src/components/icono-xbox.png) center center no-repeat;
+  }
+  .total-cart-container {
+    width: 128px;
+  }
