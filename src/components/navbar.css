@@ -59,16 +59,16 @@
   }
   
   .pc-icon {
-    background: url(/src/components/icono-pcv2.png) center center no-repeat;
+    background: url(../../public/assets/icono-pcv2.png) center center no-repeat;
   }
   .ps-icon {
-    background: url(/src/components/icono-ps4v2.png) center center no-repeat;
+    background: url(../../public/assets/icono-ps4v2.png) center center no-repeat;
   }
   .switch-icon {
-    background: url(/src/components/icono-switchv2.png) center center no-repeat;
+    background: url(../../public/assets/icono-switchv2.png) center center no-repeat;
   }
   .xbox-icon {
-    background: url(/src/components/icono-xbox.png) center center no-repeat;
+    background: url(../../public/assets/icono-xbox.png) center center no-repeat;
   }
   .total-cart-container {
     width: 128px;

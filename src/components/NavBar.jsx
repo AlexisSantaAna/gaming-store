@@ -1,4 +1,5 @@
 import React from "react"
+import CartWidget from "./CartWidget"
 import logo from "./logo.png"
 import "./navbar.css"
 
@@ -55,7 +56,7 @@ function NavBar() {
                         </li>
 
                     </ul>
-                    <a href="#" className="total-cart-container text-center"><i className="fas fa-shopping-cart fa-lg"></i><sup id="total-cart" className="h6"> 0</sup></a>
+                    <CartWidget/>
                 </div>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
