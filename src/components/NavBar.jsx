@@ -2,11 +2,13 @@ import React from "react"
 import CartWidget from "./CartWidget"
 import logo from "./logo.png"
 import "./navbar.css"
+import ToggleMenu from "./ToggleMenu"
 
 function NavBar() {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="container navbar-container">
+                <ToggleMenu />
                 <div className="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                     <a className="navbar-brand" href="#"><img className="img-fluid logo" src={logo} /></a>
                     <ul className="navbar-nav">
@@ -56,12 +58,8 @@ function NavBar() {
                         </li>
 
                     </ul>
-                    <CartWidget/>
+                    <CartWidget />
                 </div>
-
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
             </div>
         </nav>
     )
