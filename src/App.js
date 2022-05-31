@@ -4,12 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
-function App() {
+function App() {  
   return (
-    <div className="App">
-      
+    <div className="App">      
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer />      
     </div>
   );
 }
