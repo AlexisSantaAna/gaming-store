@@ -9,8 +9,9 @@ function NavBar() {
         <nav className="navbar navbar-expand-lg">
             <div className="container navbar-container">
                 <ToggleMenu />
+                <a className="navbar-brand" href="#"><img className="img-fluid logo" src={logo} /></a>
                 <div className="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                    <a className="navbar-brand" href="#"><img className="img-fluid logo" src={logo} /></a>
+                    <div></div>
                     <ul className="navbar-nav">
                         <li className="dropdown">
                             <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
