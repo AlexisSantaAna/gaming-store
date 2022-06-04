@@ -1,29 +1,50 @@
-import React, { useState } from 'react'
-import ItemCount from './ItemCount'
+import React, { useState, useEffect } from 'react'
+import ItemList from './ItemList'
 
 export default function ItemListContainer() {
-  const [estaMontado, setEstaMontado] = useState(true)
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  const desmontar = () => {
-    setEstaMontado(false)
-  }
+  //Productos
+  const listado = [
+    { id: 1, name: 'Producto 1', price: '$100' },
+    { id: 2, name: 'Producto 2', price: '$200' },
+    { id: 3, name: 'Producto 3', price: '$300' },
+    { id: 4, name: 'Producto 4', price: '$200' },
+    { id: 5, name: 'Producto 5', price: '$100' },
+    { id: 6, name: 'Producto 6', price: '$200' },
+    { id: 7, name: 'Producto 7', price: '$300' },
+    { id: 8, name: 'Producto 8', price: '$200' },
+    { id: 9, name: 'Producto 9', price: '$100' },
+    { id: 10, name: 'Producto 10', price: '$200' },
+    { id: 11, name: 'Producto 11', price: '$300' },
+    { id: 12, name: 'Producto 12', price: '$200' },
+  ]
 
-  const montar = () => {
-    setEstaMontado(true)
-  }
+  const task = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(listado)
+    }, 3000)
+  })
 
+  useEffect(() => {
+    task
+      .then((res) => {
+        setProducts(res)
+        setLoading(false)
+      })
+  }, [])
+
+  console.log(products)
+ 
   return (
     <>
-      {/* Texto provisorio */}
-      <p>Aquí ira la lista de productos!!!! Hola!!!</p>
-
-      {/* contador y montar/desmontar */}
-      {estaMontado && <ItemCount inicial={1} stock={10} />}
-
-      {/* botones para montar y desmontar */}
-      <div className='text-center'>
-        <button className='btn btn-secondary mt-4 mx-1' onClick={montar}>Montar</button>
-        <button className='btn btn-secondary mt-4 mx-1' onClick={desmontar}>Desmontar</button>
+      <div className='container'>
+        {loading ? 
+        <h2>Loading...</h2> 
+        :
+        <ItemList products={products}/>
+      }
       </div>
     </>
   )
