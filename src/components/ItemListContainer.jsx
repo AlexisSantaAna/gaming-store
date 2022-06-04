@@ -34,8 +34,6 @@ export default function ItemListContainer() {
         setLoading(false)
       })
   }, [])
-
-  console.log(products)
  
   return (
     <>
