@@ -7,18 +7,18 @@ export default function ItemListContainer() {
 
   //Productos
   const listado = [
-    { id: 1, name: 'Producto 1', price: '$100' },
-    { id: 2, name: 'Producto 2', price: '$200' },
-    { id: 3, name: 'Producto 3', price: '$300' },
-    { id: 4, name: 'Producto 4', price: '$200' },
-    { id: 5, name: 'Producto 5', price: '$100' },
-    { id: 6, name: 'Producto 6', price: '$200' },
-    { id: 7, name: 'Producto 7', price: '$300' },
-    { id: 8, name: 'Producto 8', price: '$200' },
-    { id: 9, name: 'Producto 9', price: '$100' },
-    { id: 10, name: 'Producto 10', price: '$200' },
-    { id: 11, name: 'Producto 11', price: '$300' },
-    { id: 12, name: 'Producto 12', price: '$200' },
+    { id: 1, name: 'Producto 1', price: '$100', img: `http://placekitten.com/300/40`},
+    { id: 2, name: 'Producto 2', price: '$200', img: `http://placekitten.com/300/40`},
+    { id: 3, name: 'Producto 3', price: '$300', img: `http://placekitten.com/300/40`},
+    { id: 4, name: 'Producto 4', price: '$200', img: `http://placekitten.com/300/40`},
+    { id: 5, name: 'Producto 5', price: '$100', img: `http://placekitten.com/300/40`},
+    { id: 6, name: 'Producto 6', price: '$200', img: `http://placekitten.com/300/40`},
+    { id: 7, name: 'Producto 7', price: '$300', img: `http://placekitten.com/300/40`},
+    { id: 8, name: 'Producto 8', price: '$200', img: `http://placekitten.com/300/40`},
+    { id: 9, name: 'Producto 9', price: '$100', img: `http://placekitten.com/300/40`},
+    { id: 10, name: 'Producto 10', price: '$200', img: `http://placekitten.com/300/4`},
+    { id: 11, name: 'Producto 11', price: '$300', img: `http://placekitten.com/300/4`},
+    { id: 12, name: 'Producto 12', price: '$200', img: `http://placekitten.com/300/4`},
   ]
 
   const task = new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ export default function ItemListContainer() {
     <>
       <div className='container'>
         {loading ? 
-        <h2>Loading...</h2> 
+        <h2>Cargando...</h2> 
         :
         <ItemList products={products}/>
       }
