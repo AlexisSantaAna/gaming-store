@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 import logo from "./logo.png"
 import "./navbar.css"
@@ -9,53 +10,39 @@ function NavBar() {
         <nav className="navbar navbar-expand-lg">
             <div className="container navbar-container">
                 <ToggleMenu />
-                <a className="navbar-brand" href="#"><img className="img-fluid logo" src={logo} /></a>
+                <Link className="navbar-brand" to="/"><img className="img-fluid logo" src={logo} /></Link>
                 <div className="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                     <div></div>
                     <ul className="navbar-nav">
                         <li className="dropdown">
-                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                            <Link className="nav-links" to="/productos">
+                                <span className=""></span>
+                                Productos
+                            </Link>
+                        </li>
+                        <li className="dropdown">
+                            <Link className="nav-links" to="/categoria/pc">
                                 <span className="pc-icon icons"></span>
                                 Pc
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                            </ul>
+                            </Link>
                         </li>
                         <li className="dropdown">
-                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                            <Link className="nav-links" to="/categoria/playstation">
                                 <span className="ps-icon icons"></span>
                                 Ps5
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                            </ul>
+                            </Link>
                         </li>
                         <li className="dropdown">
-                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                            <Link className="nav-links" to="/categoria/xbox">
                                 <span className="xbox-icon icons"></span>
                                 Xbox Series
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                            </ul>
+                            </Link>
                         </li>
                         <li className="dropdown">
-                            <a className="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                            <Link className="nav-links" to="/categoria/switch">
                                 <span className="switch-icon icons"></span>
                                 Switch
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                            </ul>
+                            </Link>
                         </li>
 
                     </ul>

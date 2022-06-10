@@ -32,25 +32,15 @@
   margin: 0 1rem 0 1rem;
 }
 
-.dropdown-menu a {
-  color: var(--main-black);
-  display: block;
-  padding: 6px 20px;
-  transition: all .3s;
-  font-size: .9rem;
-}
-
-.dropdown-menu a:hover {
-  color: var(--main-red);
-}
-
-.dropdown-toggle a {
+.nav-links a {
   margin-left: 4rem;
 }
+.nav-links {  
+  transition: all .3s ease-in-out;
+}
 
-.dropdown-toggle:hover {
+.nav-links:hover {
   color: var(--main-red);
-  transition: all .3s;
 }
 
 /* Icons */

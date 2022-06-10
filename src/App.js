@@ -1,28 +1,30 @@
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
-import ItemCount from './components/ItemCount';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
+import Footer from './components/Footer';
+import './index.css'
 
 
-function App() {  
-  const onAdd = (contador) => {
-    alert(`Agregado ${contador} producto(s)`)
-  }
+function App() {
 
   return (
-    <div className="App">    
+    <div className="App">
 
-      <NavBar />
-
-      <ItemListContainer /> 
-
-      <ItemDetailContainer />
-
-      <div className='contador text-center'>        
-        <ItemCount inicial={1} stock={10} onAdd={onAdd} />
-      </div>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />¡
+          <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
 
     </div>
   );

@@ -1,4 +1,5 @@
 .shop-img {
     padding: .5rem;
     object-fit: contain;
+    cursor: pointer;
 }
