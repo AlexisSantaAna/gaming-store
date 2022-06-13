@@ -1,18 +1,17 @@
 .qty .count {
     color: #000;
     display: inline-block;
-    vertical-align: top;
     font-size: 25px;
     font-weight: 700;
     line-height: 30px;
     padding: 0 2px;
     min-width: 35px;
     text-align: center;
+    vertical-align: middle;
 }
 .qty .plus {
     cursor: pointer;
     display: inline-block;
-    vertical-align: top;
     color: rgb(255, 255, 255);
     background-color: rgb(33, 33, 33);
     width: 30px;
@@ -20,12 +19,11 @@
     font: 30px/1 Arial,sans-serif;
     text-align: center;
     border-radius: 50%;
-    ;
+    vertical-align: middle;
     }
 .qty .minus {
     cursor: pointer;
     display: inline-block;
-    vertical-align: top;
     color: rgb(255, 255, 255);
     background-color: rgb(33, 33, 33);
     width: 30px;
@@ -34,6 +32,7 @@
     text-align: center;
     border-radius: 50%;
     background-clip: padding-box;
+    vertical-align: middle;
 }
 .minus:hover{
     background-color: #717fe0 !important;

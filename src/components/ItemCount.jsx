@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './itemcount.css'
 
-const ItemCount = ( {inicial, stock, onAdd} ) => {
+const ItemCount = ({ inicial, stock, onAdd }) => {
     const [contador, setContador] = useState(inicial)
 
     const restar = () => {
@@ -18,14 +18,13 @@ const ItemCount = ( {inicial, stock, onAdd} ) => {
 
     return (
         <>
-            <div className="qty mt-5 text-center">
-                <h1>¡Contador!</h1>
+            <div className="qty">
                 <span className="minus" onClick={restar}>-</span>
                 <input type="number" className="count" name="qty" value={contador} />
-                <span className="plus" onClick={sumar}>+</span>                       
+                <span className="plus" onClick={sumar}>+</span>
+                <button className="btn btn-secondary mx-3" onClick={() => reset()}>Reset</button>
+                <button className="btn btn-secondary" onClick={() => { onAdd(contador); reset() }}>Agregar al carrito</button>
             </div>
-            <button className="btn btn-secondary mx-1" onClick={() => reset()}>Reset</button>
-            <button className="btn btn-secondary my-3 mx-1" onClick={() => {onAdd(contador); reset()}}>Agregar al carrito</button>
         </>
     )
 }
