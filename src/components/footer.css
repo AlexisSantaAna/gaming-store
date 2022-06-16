@@ -13,6 +13,29 @@
     padding-bottom: .8rem;
 }
 
+.widget-list {
+    background: url(../../public/assets/greatersign2.png) no-repeat left center;
+    background-size: 1rem;
+    padding: 5px 10px 5px 20px;
+    list-style: none;
+
+}
+
+.widget-ul {
+    padding: 0;
+}
+.widget-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: .9rem;
+    transition: all .2s ease-in-out;
+}
+
+.widget-list a:hover {
+    color: rgba(255, 255, 255, 0.581);
+}
+
 .footer p {
     font-size: 14px;
 }
@@ -38,7 +61,7 @@
 }
 
 @media (max-width: 576px) {
-    .text-footer{
+    .text-footer {
         font-size: 12.6px !important;
     }
 }

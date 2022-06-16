@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 const Footer = () => {
@@ -15,9 +16,34 @@ const Footer = () => {
                         </div>
                         <div className='col-12 col-sm-4 col-edit'>
                             <h3 className='widget-title'>Gaming Store</h3>
+                            <ul className='widget-ul'>
+                                <li className='widget-list'>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li className='widget-list'>
+                                    <Link to="/">La empresa</Link>
+                                </li>
+                                <li className='widget-list'>
+                                    <Link to="/">Sucursales</Link>
+                                </li>
+                            </ul>
                         </div>
                         <div className='col-12 col-sm-4 col-edit'>
                             <h3 className='widget-title'>Productos</h3>
+                            <ul className='widget-ul'>
+                                <li className='widget-list'>
+                                    <Link to="/categoria/pc">Pc</Link>
+                                </li>
+                                <li className='widget-list'>
+                                    <Link to="/categoria/playstation">Ps5</Link>
+                                </li>
+                                <li className='widget-list'>
+                                    <Link to="/categoria/xbox">Xbox</Link>
+                                </li>
+                                <li className='widget-list'>
+                                    <Link to="/categoria/switch">Switch</Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div className='text-center py-1'>

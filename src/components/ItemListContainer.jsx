@@ -24,7 +24,7 @@ export default function ItemListContainer() {
   ] 
 
   const task = new Promise((resolve, reject) => {    
-    setTimeout(() => {
+    // setTimeout(() => {
       if (categoryId === "pc") {
         resolve(listado.filter(producto => producto.categoryId === "pc"))
       } else if (categoryId === "playstation") {
@@ -36,7 +36,7 @@ export default function ItemListContainer() {
       } else {
         resolve(listado)
       }
-    }, 2000)
+    // }, 2000)
   })
 
   useEffect(() => {

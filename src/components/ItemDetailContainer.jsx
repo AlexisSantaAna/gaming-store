@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([])
@@ -25,7 +26,7 @@ const ItemDetailContainer = () => {
 
 
     const task = new Promise((resolve, reject) => {
-        setTimeout(() => {
+        // setTimeout(() => {
             if (id == 1) {
                 resolve(item.filter(producto => producto.id === 1))
             } else if (id == 2) {
@@ -51,7 +52,7 @@ const ItemDetailContainer = () => {
             } else if (id == 12) {
                 resolve(item.filter(producto => producto.id === 12))
             }
-        }, 2000)
+        // }, 2000)
     })
 
     useEffect(() => {
@@ -64,7 +65,11 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='container my-5'>
-            {loading ? <h2>{loading}</h2> : <ItemDetail detail={detail} />}
+            {loading ? <h2>{loading}</h2> :
+                <>                    
+                    <ItemDetail detail={detail} />
+                </>
+            }
         </div>
     )
 }
