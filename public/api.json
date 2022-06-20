@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "category": "pc",
+        "name": "Pc Ryzen 5",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 2,
+        "category": "pc",
+        "name": "Pc Intel I7",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 3,
+        "category": "pc",
+        "name": "Pc Intel I5",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 4,
+        "category": "playstation",
+        "name": "Consola Playstation 5 1TB",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 5,
+        "category": "playstation",
+        "name": "Consola Playstation 5 2TB",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 6,
+        "category": "playstation",
+        "name": "Joystick PS5",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 7,
+        "category": "xbox",
+        "name": "Xbox One",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 8,
+        "category": "xbox",
+        "name": "Xbox Two",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 9,
+        "category": "xbox",
+        "name": "Xbox Three",
+        "price": 550,
+        "img": "http://placekitten.com/300/40",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 10,
+        "category": "switch",
+        "name": "Nintendo Switch",
+        "price": 550,
+        "img": "http://placekitten.com/300/4",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 11,
+        "category": "switch",
+        "name": "Nintendo Switch Premium",
+        "price": 550,
+        "img": "http://placekitten.com/300/4",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    },
+    {
+        "id": 12,
+        "category": "switch",
+        "name": "Nintendo Switch Plus XL",
+        "price": 550,
+        "img": "http://placekitten.com/300/4",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque ad cumque voluptates ipsam maxime?"
+    }
+]

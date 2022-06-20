@@ -3,3 +3,13 @@
     object-fit: contain;
     cursor: pointer;
 }
+.card-title {
+    height: 50px;
+    font-size: 1.1rem;
+    color: #e30428;
+}
+.card-price {
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+}
