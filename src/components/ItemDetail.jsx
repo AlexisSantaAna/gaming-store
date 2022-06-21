@@ -1,16 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 import ItemCount from './ItemCount'
 import './itemdetail.css'
 
 const ItemDetail = ({ detail }) => {
     const [mostrarCounter, setMostrarCounter] = useState(true)
+    const { isInCart, addItem } = useContext(CartContext)
 
-    const onAdd = (contador) => {
+    const onAdd = (qty) => {
         setMostrarCounter(false)
         //contador envia el numero de cosas compradas
-        console.log(contador)
+        isInCart(detail.id)
+        addItem(detail, qty)
     }
     return (
         <>
@@ -18,7 +21,7 @@ const ItemDetail = ({ detail }) => {
                 <>
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-12 p-2 text-center'>
-                            <img src={item.img+item.id} className='detail-img' />
+                            <img src={item.img + item.id} className='detail-img' />
                         </div>
                         <div className='col-lg-6 col-md-6 col-12'>
                             <h2 className='detail-title'>{item.name}</h2>

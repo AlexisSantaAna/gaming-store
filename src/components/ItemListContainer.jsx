@@ -22,7 +22,7 @@ export default function ItemListContainer() {
 
   useEffect(() => {
     setLoading(true)
-    const fetch = new Promise((res, rej) => {      
+    const fetch = new Promise((res, rej) => {
         res(getData())      
     })
     fetch
