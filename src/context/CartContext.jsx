@@ -13,20 +13,17 @@ const MyProvider = ({ children }) => {
     const addItem = (item, qty) => {
         const newItem = {
             ...item,
-            qty      
+            qty
         }
-
-        console.log(newItem)
-
-        if (isInCart(newItem.id)) {
-            const findProduct = cart.find(x => x.id == newItem.id)
+        if (isInCart(item.id)) {
+            const findProduct = cart.find(x => x.id == item.id)
             const productIndex = cart.indexOf(findProduct)
             const auxArray = [...cart]
             auxArray[productIndex].qty += qty
             setCart(auxArray)
-
         } else {
-            setCart([...cart, newItem])            
+            setCart([...cart, newItem])
+            // console.log(item, qty)           
         }
         console.log(cart)
     }
@@ -38,7 +35,8 @@ const MyProvider = ({ children }) => {
 
     //Filter - Cart - Retorna array sin el prod. seleciconado (id)
     const deleteItem = (id) => {
-        return cart.filter(x => x.id !== id)
+        const updatedCart = cart.filter((element) => element.id !== id);
+        setCart(updatedCart);
     }
 
     //Reduce - Productos en total (cartWidget)

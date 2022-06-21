@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
             .then(res => res.json())
             .then(data => {
                 if (id) {
-                    setDetail(data.filter(products => products.id == id))
+                    setDetail(data.find(products => products.id == id))
                 }
             })
     }

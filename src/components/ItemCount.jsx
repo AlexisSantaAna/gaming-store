@@ -16,7 +16,7 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
         <>
             <div className="qty">
                 <span className="minus" onClick={restar}>-</span>
-                <input type="number" className="count" name="qty" value={qty} />
+                <input type="number" className="count" name="qty" value={qty} onChange={(event)=>this.inputChangedHandler(event)} />                
                 <span className="plus" onClick={sumar}>+</span>
                 <button className="btn btn-secondary mx-4" onClick={() => { onAdd(qty) }}>Agregar al carrito</button>
             </div>
