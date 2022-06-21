@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import Loader from './Loader'
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([])
-    const [loading, setLoading] = useState('Cargando...')
+    const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
     const getData = () => {
@@ -14,23 +15,24 @@ const ItemDetailContainer = () => {
             .then(data => {
                 if (id) {
                     setDetail(data.filter(products => products.id == id))
-                } 
+                }
             })
     }
 
     useEffect(() => {
-        const fetch = new Promise((res, rej) => {
-          res(getData())
+        setLoading(true)
+        const fetch = new Promise((res, rej) => {            
+                res(getData())            
         })
         fetch
-          .then(setLoading(true))
-          .finally(() => setLoading(false))
-      }, [id])
+            .then(setLoading(true))
+            .finally(() => setLoading(false))
+    }, [id])
 
     return (
         <div className='container my-5'>
-            {loading ? <h2>{loading}</h2> :
-                <>                    
+            {loading ? <Loader loading={loading} /> :
+                <>
                     <ItemDetail detail={detail} />
                 </>
             }

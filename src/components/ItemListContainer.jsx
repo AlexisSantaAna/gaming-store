@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
+import Loader from './Loader'
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([])
@@ -20,22 +21,18 @@ export default function ItemListContainer() {
   }
 
   useEffect(() => {
-    const fetch = new Promise((res, rej) => {
-      res(getData())
+    setLoading(true)
+    const fetch = new Promise((res, rej) => {      
+        res(getData())      
     })
     fetch
-      .then(setLoading(true))
-      .finally(() => setLoading(false))
+      .finally(() => setLoading(false));
   }, [categoryId])
 
   return (
     <>
       <main className='container main-container'>
-        {loading ?
-          <h2 className='text-center my-5'>Cargando...</h2>
-          :
-          <ItemList products={products} />
-        }
+        {loading ? <Loader loading={loading} /> : <ItemList products={products} />}
       </main>
     </>
   )
