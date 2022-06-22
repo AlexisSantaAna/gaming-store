@@ -1,0 +1,11 @@
+.cart-img {
+    width: 50%;
+    align-self: center;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+.cart-img-container {
+    align-self: center;
+}

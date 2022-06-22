@@ -20,9 +20,9 @@ const ItemDetail = ({ detail }) => {
             <>
                 <div className='row'>
                     <div className='col-lg-6 col-md-6 col-12 p-2 text-center'>
-                        <img src={detail.img + detail.id} className='detail-img' />
+                        <img src={detail.img} className='detail-img' />
                     </div>
-                    <div className='col-lg-6 col-md-6 col-12'>
+                    <div className='col-lg-6 col-md-6 col-12 justify-content-center align-items-center'>
                         <h2 className='detail-title'>{detail.name}</h2>
                         <p className='detail-price'>$ {detail.price}</p>
                         <p className='detail-details'>{detail.details}</p>

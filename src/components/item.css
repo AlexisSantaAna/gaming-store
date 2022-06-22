@@ -2,14 +2,19 @@
     padding: .5rem;
     object-fit: contain;
     cursor: pointer;
+    max-width: 202px;
+    max-height: 202px;
 }
 .card-title {
     height: 50px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #e30428;
 }
 .card-price {
     font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Rubik', sans-serif;
+}
+.card-img {
+    min-height: 200px;
 }

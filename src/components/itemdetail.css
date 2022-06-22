@@ -8,4 +8,8 @@
 }
 .detail-details {
     font: 400 1rem 'Open Sans',sans-serif!important;
+    white-space:pre-wrap;
+}
+.detail-img {
+    max-width: 80%;
 }
