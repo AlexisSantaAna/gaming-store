@@ -2,14 +2,17 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
+
 .detail-price {
-    font: 500 1.8rem 'Open Sans',sans-serif!important;
+    font: 500 1.8rem 'Open Sans', sans-serif !important;
     color: #4675b9;
 }
+
 .detail-details {
-    font: 400 1rem 'Open Sans',sans-serif!important;
-    white-space:pre-wrap;
+    font: 400 1rem 'Open Sans', sans-serif !important;
+    white-space: pre-wrap;
 }
+
 .detail-img {
     max-width: 80%;
 }

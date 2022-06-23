@@ -5,7 +5,7 @@
         "name": "Notebook Asus Zenbook Pro i9 RTX3080",
         "price": 645000,
         "img": "../../assets/products/1.jpg",
-        "details": "Sistema operativo: Windows 11\nProcesador: Intel Core i9 11900H 4.9 GHz\nGraficos: NVIDIA® GeForce RTX™ 3080 8GB GDDR6\nDisplay: 15.6-inch 4K UHD OLED\nDisplay Adicional: 14″  3840×1100 Touch Screen\nMemoria: 32GB DDR4\nAlmacenamiento: 1TB  M.2 NVMe™ PCIe® 3.0"
+        "details": "Sistema operativo: Windows 11<br/>Procesador: Intel Core i9 11900H 4.9 GHz<br/>Graficos: NVIDIA® GeForce RTX™ 3080 8GB GDDR6<br/>Display: 15.6-inch 4K UHD OLED<br/>Display Adicional: 14″  3840×1100 Touch Screen<br/>Memoria: 32GB DDR4<br/>Almacenamiento: 1TB  M.2 NVMe™ PCIe® 3.0"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "name": "Notebook Aorus 15P i7 RTX3080Q 32GB 240Hz",
         "price": 458595,
         "img": "../../assets/products/2.jpg",
-        "details": "Windows 10 Home\nNVIDIA® GeForce RTX™ 3080Q GPU\n11th Gen Intel® Core™ i7 Processor H-Series\nMemoria 32GB (2x16GB)\nWINDFORCE Infinity Cooling System\n15.6” FHD 240Hz IPS-level Panel\nPCIe Gen4 1TB SSD\nTeclado retroiluminado en inglés"
+        "details": "Windows 10 Home<br/>NVIDIA® GeForce RTX™ 3080Q GPU<br/>11th Gen Intel® Core™ i7 Processor H-Series<br/>Memoria 32GB (2x16GB)<br/>WINDFORCE Infinity Cooling System<br/>15.6” FHD 240Hz IPS-level Panel<br/>PCIe Gen4 1TB SSD<br/>Teclado retroiluminado en inglés"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "name": "Notebook Asus TUF Dash F15 i7 RTX3060",
         "price": 313470,
         "img": "../../assets/products/3.jpg",
-        "details": "Pantalla: IPS de 15.6″ Full HD de 1920 x 1080p a 144 Hz\nProcesador: Intel Core i7-12650H Deca-Core\nMemoria RAM: 16 GB DDR5 (2x8GB)\nMemoria de almacenamiento: SSD M.2 NVMe de 512 GB\nGráficos: NVIDIA GeForce RTX 3060 de 6 GB GDDR6\nSistema operativo: Windows 11 Home"
+        "details": "Pantalla: IPS de 15.6″ Full HD de 1920 x 1080p a 144 Hz<br/>Procesador: Intel Core i7-12650H Deca-Core<br/>Memoria RAM: 16 GB DDR5 (2x8GB)<br/>Memoria de almacenamiento: SSD M.2 NVMe de 512 GB<br/>Gráficos: NVIDIA GeForce RTX 3060 de 6 GB GDDR6<br/>Sistema operativo: Windows 11 Home"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "name": "Notebook MSI Katana GF66 i7 RTX3050ti 144hz",
         "price": 270900,
         "img": "../../assets/products/4.jpg",
-        "details": "Procesador Intel® CoreTM i7-12700H de 12.ª\nMemoria DDR4-3200 de 16 GB, (2 * 8 GB)\nFull HD de 15,6″ 144 Hz IPS\nGráficos NVIDIA® GeForce RTXTM 3050 Ti 4GB\nDisco SSD NVMe M.2 de 512 GB PCIe Gen4"
+        "details": "Procesador Intel® CoreTM i7-12700H de 12.ª<br/>Memoria DDR4-3200 de 16 GB, (2 * 8 GB)<br/>Full HD de 15,6″ 144 Hz IPS<br/>Gráficos NVIDIA® GeForce RTXTM 3050 Ti 4GB<br/>Disco SSD NVMe M.2 de 512 GB PCIe Gen4"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "name": "Notebook Gigabyte G5 i5 RTX3060 144hz",
         "price": 239166,
         "img": "../../assets/products/5.jpg",
-        "details": "Windows 10 Home\nNVIDIA® GeForce RTX™ 3060 Series Laptop GPUs\n10th Gen Intel® Core™ i5 Processor H-Series\n15.6″ Thin Bezel FHD IPS-Level 144Hz display\nIntel® Wi-Fi 6 AX200 Wireless Network Card\nMemoria 2x8GB 3200MHZ DDR4\nAlmacenamiento 512GB SSD M.2 PCIe"
+        "details": "Windows 10 Home<br/>NVIDIA® GeForce RTX™ 3060 Series Laptop GPUs<br/>10th Gen Intel® Core™ i5 Processor H-Series<br/>15.6″ Thin Bezel FHD IPS-Level 144Hz display<br/>Intel® Wi-Fi 6 AX200 Wireless Network Card<br/>Memoria 2x8GB 3200MHZ DDR4<br/>Almacenamiento 512GB SSD M.2 PCIe"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "name": "Sony PlayStation 5 825GB Digital Edition color blanco y negro",
         "price": 185999,
         "img": "../../assets/products/6.jpg",
-        "details": "Incluye control.\nResolución de 3840px x 2160px.\nMemoria RAM de 16GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido."
+        "details": "Incluye control.<br/>Resolución de 3840px x 2160px.<br/>Memoria RAM de 16GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido."
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "name": "Sony Playstation 5 825gb Standard + Joy Rojo Adicional",
         "price": 229999,
         "img": "../../assets/products/7.jpg",
-        "details": "Incluye control.\nResolución de 3840px x 2160px.\nMemoria RAM de 16GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido.\n1 Joystick rojo extra"
+        "details": "Incluye control.<br/>Resolución de 3840px x 2160px.<br/>Memoria RAM de 16GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido.<br/>1 Joystick rojo extra"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "name": "Sony Playstation 5 Standard + 1 Joystick + 2 Juegos",
         "price": 254000,
         "img": "../../assets/products/8.jpg",
-        "details": "Incluye control.\nResolución de 3840px x 2160px.\nMemoria RAM de 16GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido.\nJuegos Gran Turismo 7 y Ratchet & Clank"
+        "details": "Incluye control.<br/>Resolución de 3840px x 2160px.<br/>Memoria RAM de 16GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable de alimentación ca, 1 cable hdmi, 1 cable de carga usb, 1 dock, 1 guía de inicio rápido.<br/>Juegos Gran Turismo 7 y Ratchet & Clank"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "name": "Joystick Ps5 Inalámbrico Sony Dualsense Starlight Blue",
         "price": 14599,
         "img": "../../assets/products/9.jpg",
-        "details": "Descubre una experiencia de juego más profunda y envolvente que hace que la acción cobre vida en las palmas de tus manos. El control inalámbrico DualSense ™ ofrece retroalimentación háptica inmersiva, gatillos adaptativos dinámicos y un micrófono incorporado, todo integrado en un diseño icónico y cómodo.\n\nEs inalámbrico: Sí\nCon Bluetooth: Sí\nCon touchpad: Sí\nCon detección de movimiento: Sí\nCon vibración: Sí"
+        "details": "Descubre una experiencia de juego más profunda y envolvente que hace que la acción cobre vida en las palmas de tus manos. El control inalámbrico DualSense ™ ofrece retroalimentación háptica inmersiva, gatillos adaptativos dinámicos y un micrófono incorporado, todo integrado en un diseño icónico y cómodo.<br/><br/>Es inalámbrico: Sí<br/>Con Bluetooth: Sí<br/>Con touchpad: Sí<br/>Con detección de movimiento: Sí<br/>Con vibración: Sí"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "name": "Marvel's Spider-Man: Miles Morales Standard Edition Sony PS5 Físico",
         "price": 9999,
         "img": "../../assets/products/10.jpg",
-        "details": "Lo que tenés que saber de este producto\nClasificación T.\nAño de lanzamiento: 2020.\nDesarrollado por Insomniac Games.\nGénero: acción.\nEntretenimiento digital.\nDiversión asegurada."
+        "details": "Lo que tenés que saber de este producto<br/>Clasificación T.<br/>Año de lanzamiento: 2020.<br/>Desarrollado por Insomniac Games.<br/>Género: acción.<br/>Entretenimiento digital.<br/>Diversión asegurada."
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "name": "Microsoft Xbox Series X 1TB Standard color negro",
         "price": 169999,
         "img": "../../assets/products/11.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye control.\nResolución de 2560px x 1440px.\nMemoria RAM de 16GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable hdmi, 1 cable de alimentación."
+        "details": "Lo que tenés que saber de este producto<br/>Incluye control.<br/>Resolución de 2560px x 1440px.<br/>Memoria RAM de 16GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable hdmi, 1 cable de alimentación."
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "name": "Microsoft Xbox Series X 1TB + 1 Joystick extra",
         "price": 184999,
         "img": "../../assets/products/12.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye control.\nResolución de 2560px x 1440px.\nMemoria RAM de 16GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable hdmi, 1 cable de alimentación.\n1 Joystick extra"
+        "details": "Lo que tenés que saber de este producto<br/>Incluye control.<br/>Resolución de 2560px x 1440px.<br/>Memoria RAM de 16GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable hdmi, 1 cable de alimentación.<br/>1 Joystick extra"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "name": "Microsoft Xbox Series S 512GB Standard color blanco",
         "price": 99999,
         "img": "../../assets/products/13.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye control.\nResolución de 2560px x 1440px.\nMemoria RAM de 10GB.\nHoras de diversión garantizada.\nCuenta con: 1 cable hdmi, 1 cable de alimentación"
+        "details": "Lo que tenés que saber de este producto<br/>Incluye control.<br/>Resolución de 2560px x 1440px.<br/>Memoria RAM de 10GB.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 cable hdmi, 1 cable de alimentación"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "name": "Microsoft Xbox Series S 512GB Extra controller color blanco",
         "price": 110999,
         "img": "../../assets/products/14.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye 2 controles.\nResolución de 2560px x 1440px.\nHoras de diversión garantizada.\nCuenta con: 1 suscripción a xbox live gold por 3 meses, 1 cable hdmi, 1 cable de alimentación"
+        "details": "Lo que tenés que saber de este producto<br/>Incluye 2 controles.<br/>Resolución de 2560px x 1440px.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 suscripción a xbox live gold por 3 meses, 1 cable hdmi, 1 cable de alimentación"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "name": "Joystick inalámbrico Microsoft Xbox Series X|S aqua shift special edition",
         "price": 19199,
         "img": "../../assets/products/15.jpg",
-        "details": "Lo que tenés que saber de este producto\nCuenta con Bluetooth.\nMando inalámbrico.\nCompatible con: Xbox Series X, Xbox Series S, Xbox One, Computadoras y Tablets y Smartphones.\nIncluye un control.\nCon sistema de vibración incorporado.\nCompatible con: Windows 10, Windows 11, iOS, Android.\nDiversión garantizada con tu joystick Xbox.\nDiseño ergonómico."
+        "details": "Lo que tenés que saber de este producto<br/>Cuenta con Bluetooth.<br/>Mando inalámbrico.<br/>Compatible con: Xbox Series X, Xbox Series S, Xbox One, Computadoras y Tablets y Smartphones.<br/>Incluye un control.<br/>Con sistema de vibración incorporado.<br/>Compatible con: Windows 10, Windows 11, iOS, Android.<br/>Diversión garantizada con tu joystick Xbox.<br/>Diseño ergonómico."
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@
         "name": "Nintendo Switch 32GB Standard color rojo neón, azul neón y negro",
         "price": 80999,
         "img": "../../assets/products/16.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye 2 controles.\nResolución de 1920px x 1080px.\nMemoria RAM de 4GB.\nTiene pantalla táctil.\nHoras de diversión garantizada.\nCuenta con: 1 joy-con grip, 2 correas para joy-con, 1 dock, 1 cable hdmi, 1 adaptador de corriente."
+        "details": "Lo que tenés que saber de este producto<br/>Incluye 2 controles.<br/>Resolución de 1920px x 1080px.<br/>Memoria RAM de 4GB.<br/>Tiene pantalla táctil.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 joy-con grip, 2 correas para joy-con, 1 dock, 1 cable hdmi, 1 adaptador de corriente."
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@
         "name": "Nintendo Switch OLED 64GB Standard color blanco y negro",
         "price": 106929,
         "img": "../../assets/products/17.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye 2 controles.\nResolución de 1920px x 1080px.\nMemoria RAM de 4GB.\nTiene pantalla táctil.\nLa duración de la batería es de 9h.\nHoras de diversión garantizada.\nCuenta con: 1 joy-con grip, 1 adaptador de corriente, 1 dock, 1 cable hdmi, 2 correas para joy-con."
+        "details": "Lo que tenés que saber de este producto<br/>Incluye 2 controles.<br/>Resolución de 1920px x 1080px.<br/>Memoria RAM de 4GB.<br/>Tiene pantalla táctil.<br/>La duración de la batería es de 9h.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 joy-con grip, 1 adaptador de corriente, 1 dock, 1 cable hdmi, 2 correas para joy-con."
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "name": "Nintendo Switch Lite 32GB Standard color amarillo",
         "price": 54999,
         "img": "../../assets/products/18.jpg",
-        "details": "Lo que tenés que saber de este producto\nEs portátil, ideal para llevar a donde quieras y jugar con tus amistades y familia.\nMemoria RAM de 4GB.\nTiene pantalla táctil.\nLa duración de la batería es de 7h.\nHoras de diversión garantizada.\nCuenta con: 1 adaptador de corriente."
+        "details": "Lo que tenés que saber de este producto<br/>Es portátil, ideal para llevar a donde quieras y jugar con tus amistades y familia.<br/>Memoria RAM de 4GB.<br/>Tiene pantalla táctil.<br/>La duración de la batería es de 7h.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 adaptador de corriente."
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "name": "Nintendo Switch Lite 32GB Standard color turquesa",
         "price": 54999,
         "img": "../../assets/products/19.jpg",
-        "details": "Lo que tenés que saber de este producto\nCuenta con Bluetooth.\nMando inalámbrico.\nCompatible con: Xbox Series X, Xbox Series S, Xbox One, Computadoras y Tablets y Smartphones.\nIncluye un control.\nCon sistema de vibración incorporado.\nCompatible con: Windows 10, Windows 11, iOS, Android.\nDiversión garantizada con tu joystick Xbox.\nDiseño ergonómico."
+        "details": "Lo que tenés que saber de este producto<br/>Cuenta con Bluetooth.<br/>Mando inalámbrico.<br/>Compatible con: Xbox Series X, Xbox Series S, Xbox One, Computadoras y Tablets y Smartphones.<br/>Incluye un control.<br/>Con sistema de vibración incorporado.<br/>Compatible con: Windows 10, Windows 11, iOS, Android.<br/>Diversión garantizada con tu joystick Xbox.<br/>Diseño ergonómico."
     },    
     {
         "id": 20,
@@ -157,6 +157,6 @@
         "name": "Nintendo Switch 32GB Animal Crossing: New Horizons",
         "price": 81999,
         "img": "../../assets/products/20.jpg",
-        "details": "Lo que tenés que saber de este producto\nIncluye 2 controles.\nResolución de 1920px x 1080px.\nMemoria RAM de 4GB.\nTiene pantalla táctil.\nLa duración de la batería es de 6.5h.\nHoras de diversión garantizada.\nCuenta con: 1 joy-con grip, 2 correas joy-con, 1 dock, 1 cable hdmi, 1 adaptador de corriente."
+        "details": "Lo que tenés que saber de este producto<br/>Incluye 2 controles.<br/>Resolución de 1920px x 1080px.<br/>Memoria RAM de 4GB.<br/>Tiene pantalla táctil.<br/>La duración de la batería es de 6.5h.<br/>Horas de diversión garantizada.<br/>Cuenta con: 1 joy-con grip, 2 correas joy-con, 1 dock, 1 cable hdmi, 1 adaptador de corriente."
     }
 ]

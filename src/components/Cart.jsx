@@ -15,24 +15,25 @@ const Cart = () => {
                 {cart.length > 0 &&
                     <div className='text-center d-flex justify-content-center align-items-center'>
                         <div className='row container justify-content-center align-items-center'>
-                            <div className='col-6 text-center'>
-                                <p>PRODUCTOS</p>
+                            <div className='col-2'></div>
+                            <div className='col-4 text-center'>
+                                <p className='h6'>PRODUCTOS</p>
                             </div>
                             <div className='col-2 text-center'>
-                                <p>CANTIDAD</p>
+                                <p className='h6'>CANTIDAD</p>
                             </div>
                             <div className='col-2 text-center'>
-                                <p>PRECIO</p>
+                                <p className='h6'>PRECIO</p>
                             </div>
                             <div className='col-2 text-center'>
-                                <p>TOTAL</p>
+                                <p className='h6'>TOTAL</p>
                             </div>
                         </div>
                     </div>
                 }
                 {cart.map((e, index) => (
                     <>
-                        <div key={index} className='text-center d-flex justify-content-center align-items-center py-2'>
+                        <div key={index} className='text-center d-flex justify-content-center align-items-center py-3 item-cart'>
                             <div className='row container justify-content-center align-items-center'>
                                 <div className='col-6 d-flex'>
                                     <div className='row d-flex'>
@@ -40,8 +41,7 @@ const Cart = () => {
                                             <img src={e.img} className='cart-img'></img>
                                         </div>
                                         <div className='col-8'>
-                                            <p className='text-center'>{e.name}</p>
-                                            <p className='text-center'>{e.category}</p>
+                                            <p className='text-center cart-title'>{e.name}</p>
                                             <button className='btn btn-secondary btn-sm' onClick={() => deleteItem(e.id)}>Eliminar producto</button>
                                         </div>
                                     </div>

@@ -25,7 +25,7 @@ const ItemDetail = ({ detail }) => {
                     <div className='col-lg-6 col-md-6 col-12 justify-content-center align-items-center'>
                         <h2 className='detail-title'>{detail.name}</h2>
                         <p className='detail-price'>$ {detail.price}</p>
-                        <p className='detail-details'>{detail.details}</p>
+                        <p className='detail-details' dangerouslySetInnerHTML={{__html:detail.details}}></p>
                         {mostrarCounter ? <ItemCount inicial={1} stock={5} onAdd={onAdd} />
                             :
                             <>
