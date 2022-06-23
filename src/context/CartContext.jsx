@@ -22,10 +22,8 @@ const MyProvider = ({ children }) => {
             auxArray[productIndex].qty += qty
             setCart(auxArray)
         } else {
-            setCart([...cart, newItem])
-            // console.log(item, qty)           
+            setCart([...cart, newItem])      
         }
-        console.log(cart)
     }
 
     //Vaciar el carrito con botón
