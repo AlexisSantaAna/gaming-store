@@ -1,10 +1,11 @@
 import React from 'react'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
 import './cart.css'
 
 const Cart = () => {
-    const { cart, emptyCart, getItemPrice, deleteItem } = useContext(CartContext)
+    const { cart, emptyCart, getItemPrice, deleteItem, getItemQty } = useContext(CartContext)
 
 
     return (
@@ -63,12 +64,18 @@ const Cart = () => {
 
             {cart.length > 0 ?
                 <div className='text-center py-5'>
-                    <button className='btn btn-secondary' onClick={emptyCart}>Vaciar carrito</button>
+                    <button className='btn btn-secondary btn-sm mx-2' onClick={emptyCart}>Vaciar carrito</button>
+                    <button className='btn btn-secondary btn-sm mx-2' onClick={() => {
+                        alert(`¡Ha comprado ${getItemQty()} productos!`)
+                        emptyCart()
+                    }}>Finalizar compra</button>
                     <p className='text-center'>PRECIO TOTAL ${getItemPrice()}</p>
                 </div> :
                 <div className='text-center'>
                     <p>NO HAY PRODUCTOS</p>
+                    <Link to={'/'}><button className='btn btn-secondary btn-sm'>Volver a la tienda</button></Link>
                 </div>
+
             }
 
         </>
