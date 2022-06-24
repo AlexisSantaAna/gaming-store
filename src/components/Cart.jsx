@@ -2,10 +2,41 @@ import React from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import Swal from 'sweetalert2'
 import './cart.css'
+import 'atropos/css'
 
 const Cart = () => {
     const { cart, emptyCart, getItemPrice, deleteItem, getItemQty } = useContext(CartContext)
+
+    const purchaseAlert = () => {
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            iconColor: "#00A300",
+            title: `Ha comprado ${getItemQty()} productos`,
+            showConfirmButton: false,
+            timer: 2500,
+        });
+    }
+
+    const emptyCartAlert = () => {
+        Swal.fire({
+            toast: true,
+            position: "bottom-end",
+            icon: "success",
+            iconColor: "#374151",
+            title: "Carrito vacío",
+            showConfirmButton: false,
+            timer: 2500,
+            showClass: {
+                popup: 'animate__animated animate__fadeInUp'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutDown'
+            }
+        });
+    }
 
 
     return (
@@ -64,9 +95,12 @@ const Cart = () => {
 
             {cart.length > 0 ?
                 <div className='text-center py-5'>
-                    <button className='btn btn-secondary btn-sm mx-2' onClick={emptyCart}>Vaciar carrito</button>
                     <button className='btn btn-secondary btn-sm mx-2' onClick={() => {
-                        alert(`¡Ha comprado ${getItemQty()} productos!`)
+                        emptyCart()
+                        emptyCartAlert()
+                    }}>Vaciar carrito</button>
+                    <button className='btn btn-secondary btn-sm mx-2' onClick={() => {
+                        purchaseAlert()
                         emptyCart()
                     }}>Finalizar compra</button>
                     <p className='text-center'>PRECIO TOTAL ${getItemPrice()}</p>

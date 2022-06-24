@@ -26,7 +26,7 @@ const ItemDetail = ({ detail }) => {
                         <h2 className='detail-title'>{detail.name}</h2>
                         <p className='detail-price'>$ {detail.price}</p>
                         <p className='detail-details' dangerouslySetInnerHTML={{__html:detail.details}}></p>
-                        {mostrarCounter ? <ItemCount inicial={1} stock={5} onAdd={onAdd} />
+                        {mostrarCounter ? <ItemCount inicial={1} stock={5} onAdd={onAdd} product={detail.name} />
                             :
                             <>
                                 <Link className="btn btn-secondary" to='/productos'>Seguir Comprando</Link>
