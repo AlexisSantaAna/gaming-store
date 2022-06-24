@@ -65,26 +65,26 @@ const Cart = () => {
                 {cart.map((e, index) => (
                     <>
                         <div key={index} className='text-center d-flex justify-content-center align-items-center py-3 item-cart'>
-                            <div className='row container justify-content-center align-items-center'>
+                            <div className='row container justify-content-center align-items-center cart-container'>
                                 <div className='col-6 d-flex'>
                                     <div className='row d-flex'>
                                         <div className='col-4 cart-img-container'>
                                             <img src={e.img} className='cart-img'></img>
                                         </div>
-                                        <div className='col-8'>
+                                        <div className='col-8 d-flex flex-column align-items-center justify-content-center'>
                                             <p className='text-center cart-title'>{e.name}</p>
-                                            <button className='btn btn-secondary btn-sm' onClick={() => deleteItem(e.id)}>Eliminar producto</button>
+                                            <p className='delete-btn' onClick={() => deleteItem(e.id)}><i class="fa fa-trash fa-sm"></i> Eliminar producto</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='col-2'>
-                                    <p className='text-center'>{e.qty}</p>
+                                    <p className='text-center fw-bold'>{e.qty}</p>
                                 </div>
                                 <div className='col-2'>
-                                    <p className='text-center'>${e.price}</p>
+                                    <p className='text-center fw-bold'>${e.price}</p>
                                 </div>
                                 <div className='col-2'>
-                                    <p className='text-center'>${e.qty * e.price}</p>
+                                    <p className='text-center fw-bold'>${e.qty * e.price}</p>
                                 </div>
                             </div>
 

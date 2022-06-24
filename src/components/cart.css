@@ -1,5 +1,5 @@
 .cart-img {
-    width: 50%;
+    width: 60%;
     align-self: center;
     margin: auto;
     align-content: center;
@@ -17,6 +17,25 @@
     line-height: 1.4;
 }
 
-.item-cart:hover {
-    background-color: rgba(235, 235, 235, 0.685);
+.cart-container {    
+        border: 1px solid rgba(128, 128, 128, 0.763);
+        border-bottom: 5px solid rgba(124, 124, 124, 0.779) ;
+        border-radius: 10px ;  
+        padding: 6px;        
+}
+
+.cart-container:hover {
+    border: 1px solid #e30428 !important;
+    border-bottom: 5px solid #e30428 !important; 
+    background-color: rgba(235, 210, 210, 0.29);
+}
+
+.delete-btn {
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #e30428;
 }
