@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore'
+import { getFirestore, getDocs, collection, query, where, getDoc, doc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 import Loader from './Loader'
+import { Helmet } from 'react-helmet'
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([])
@@ -16,9 +17,8 @@ export default function ItemListContainer() {
     let pedido;
 
     if (categoryId) {
-      const filtro1 = where("category", "==", categoryId);
-      const consulta = query(coleccionProductos, filtro1);
-      pedido = getDocs(consulta);
+      const filtro = query(coleccionProductos, where("category", "==", categoryId));
+      pedido = getDocs(filtro); //getDocs devuelve una promesa
     } else {
       pedido = getDocs(coleccionProductos);
     }
@@ -29,30 +29,14 @@ export default function ItemListContainer() {
       .finally(() => setLoading(false));
   }, [categoryId]);
 
-  // const getData = () => {
-  //   fetch('../../api.json')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       if (categoryId) {
-  //         setProducts(data.filter(products => products.category == categoryId))
-  //       } else {
-  //         setProducts(data)
-  //       }
-  //     })
-  // }
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   const fetch = new Promise((res, rej) => {
-  //     res(getData())
-  //   })
-  //   fetch
-  //     .finally(() => setLoading(false));
-  // }, [categoryId])
+  const title = categoryId ? categoryId : 'Productos'
 
   return (
     <>
       <main className='container main-container'>
+        <Helmet>
+          <title>{`Gaming Store - ${title.charAt(0).toUpperCase() + title.slice(1)}`}</title>
+        </Helmet>
         {loading ? <Loader loading={loading} /> : <ItemList products={products} />}
       </main>
     </>

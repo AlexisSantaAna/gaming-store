@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getFirestore, collection, doc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
@@ -13,36 +13,14 @@ const ItemDetailContainer = () => {
     //Firebase
     useEffect(() => {
         const db = getFirestore()
-        const coleccionProductos = collection(db, "productos");
-        const docRef = doc(coleccionProductos, id);
-        const pedido = getDoc(docRef);
+        const productRef = doc(db, "productos", id); //Traigo 1 solo producto que coincida con el id
+        const pedido = getDoc(productRef);
         pedido
-            .then((resultado) => {
-                const producto = resultado.data();
-                setDetail({ ...producto, id });
+            .then((producto) => {
+                setDetail({ ...producto.data(), id: id });
             })
             .finally(() => setLoading(false));
     }, [id]);
-
-    // const getData = () => {
-    //     fetch('../../api.json')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (id) {
-    //                 setDetail(data.find(products => products.id == id))
-    //             }
-    //         })
-    // }
-
-    // useEffect(() => {
-    //     setLoading(true)
-    //     const fetch = new Promise((res, rej) => {
-    //         res(getData())
-    //     })
-    //     fetch
-    //         .then(setLoading(true))
-    //         .finally(() => setLoading(false))
-    // }, [id])
 
     return (
         <div className='container my-5'>

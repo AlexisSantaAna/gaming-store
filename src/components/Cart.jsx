@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import { Helmet } from 'react-helmet'
 import Swal from 'sweetalert2'
 import './cart.css'
 import 'atropos/css'
@@ -41,6 +42,9 @@ const Cart = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Gaming Store - Carrito</title>
+            </Helmet>
             <section className='container'>
                 <h2 className='text-center py-5'>Carrito de compras</h2>
                 {cart.length > 0 &&

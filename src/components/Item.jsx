@@ -10,9 +10,6 @@ const Item = ({ product }) => {
                 className='my-atropos'
                 activeOffset={40}
                 shadowScale={0}
-                onEnter={() => console.log('Enter')}
-                onLeave={() => console.log('Leave')}
-                onRotate={(x, y) => console.log('Rotate', x, y)}
             >
                 <div className="col">
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/CartContext'
+import { Helmet } from 'react-helmet'
 import ItemCount from './ItemCount'
 import './itemdetail.css'
 
@@ -18,6 +19,9 @@ const ItemDetail = ({ detail }) => {
     return (
         <>
             <>
+                <Helmet>
+                    <title>{`Gaming Store - ${detail.name.charAt(0).toUpperCase() + detail.name.slice(1)}`}</title>
+                </Helmet>
                 <div className='row'>
                     <div className='col-lg-6 col-md-6 col-12 p-2 d-flex justify-content-center align-items-center'>
                         <img src={detail.img} className='detail-img' />

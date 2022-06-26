@@ -6,7 +6,6 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer';
 import './index.css'
-import TestEventos from './components/TestEventos';
 import MyProvider from './context/CartContext';
 import Cart from './components/Cart';
 import { initializeApp } from "firebase/app";
@@ -38,7 +37,6 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
-            <Route path="/testeventos" element={<TestEventos />} />
             <Route path="/productos" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/categoria/:categoryId" element={<ItemListContainer />} />
