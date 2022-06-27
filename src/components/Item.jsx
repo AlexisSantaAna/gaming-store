@@ -6,13 +6,12 @@ import Atropos from 'atropos/react';
 const Item = ({ product }) => {
     return (
         <>
-            <Atropos
-                className='my-atropos'
-                activeOffset={40}
-                shadowScale={0}
-            >
-                <div className="col">
-
+            <div className="col">
+                <Atropos
+                    className='my-atropos'
+                    activeOffset={40}
+                    shadowScale={0}
+                >
                     <div className="card h-100">
                         <Link to={"/item/" + product.id} className="text-center card-img d-flex justify-content-center"><img src={product.img} className="card-img-top shop-img" alt="product" data-atropos-offset="6" /></Link>
                         <div className="card-body text-center">
@@ -22,9 +21,9 @@ const Item = ({ product }) => {
                             </div>
                         </div>
                     </div>
+                </Atropos>
+            </div>
 
-                </div>
-            </Atropos>
         </>
     )
 }

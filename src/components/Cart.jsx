@@ -5,6 +5,7 @@ import { CartContext } from '../context/CartContext'
 import { Helmet } from 'react-helmet'
 import Swal from 'sweetalert2'
 import './cart.css'
+import './itemList.css'
 import 'atropos/css'
 
 const Cart = () => {
@@ -46,7 +47,7 @@ const Cart = () => {
                 <title>Gaming Store - Carrito</title>
             </Helmet>
             <section className='container'>
-                <h2 className='text-center py-5'>Carrito de compras</h2>
+                <h2 className='text-center py-5 main-title animate__animated animate__bounceInLeft'>Carrito de compras</h2>
                 {cart.length > 0 &&
                     <div className='text-center d-flex justify-content-center align-items-center'>
                         <div className='row container justify-content-center align-items-center'>
@@ -98,7 +99,7 @@ const Cart = () => {
             </section>
 
             {cart.length > 0 ?
-                <div className='text-center py-5'>
+                <div className='text-center pt-2 pb-5 d-flex justify-content-end align-items-center container'>
                     <button className='btn btn-secondary btn-sm mx-2' onClick={() => {
                         emptyCart()
                         emptyCartAlert()
@@ -107,7 +108,11 @@ const Cart = () => {
                         purchaseAlert()
                         emptyCart()
                     }}>Finalizar compra</button>
-                    <p className='text-center'>PRECIO TOTAL ${getItemPrice()}</p>
+                    <div className='px-2'>
+                        <div className='text-center'>PRECIO TOTAL</div>                        
+                        <div><b>${getItemPrice()}</b></div>
+                    </div>
+
                 </div> :
                 <div className='text-center'>
                     <p>NO HAY PRODUCTOS</p>

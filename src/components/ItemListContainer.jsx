@@ -33,7 +33,7 @@ export default function ItemListContainer() {
 
   return (
     <>
-      <main className='container main-container'>
+      <main className='container main-container d-flex flex-column align-items-center justify-content-center'>
         <Helmet>
           <title>{`Gaming Store - ${title.charAt(0).toUpperCase() + title.slice(1)}`}</title>
         </Helmet>
