@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 575px) {
-    .row-cols {
-        max-width: 79%;
+    .mobile-width {
+        width: 90%;
     }
 }
