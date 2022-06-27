@@ -114,7 +114,7 @@ const Cart = () => {
                     </div>
 
                 </div> :
-                <div className='text-center'>
+                <div className='text-center pb-5'>
                     <p>NO HAY PRODUCTOS</p>
                     <Link to={'/'}><button className='btn btn-secondary btn-sm'>Volver a la tienda</button></Link>
                 </div>
