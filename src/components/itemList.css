@@ -1,11 +1,18 @@
 .main-title {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     font-family:  'Open Sans', sans-serif !important;
     font-weight: 300;
 }
 
 @media (max-width: 575px) {
     .mobile-width {
-        width: 90%;
+        width: 84%;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-title {
+        font-size: 2rem;
+        font-weight: 400;
     }
 }

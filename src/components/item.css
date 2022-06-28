@@ -32,3 +32,14 @@
     border: 1px solid #e30428 !important;
     border-bottom: 5px solid #e30428 !important;
 }
+
+.vermas-btn {
+    font-weight: 500;
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.vermas-btn:hover {
+    color: #e30428;
+}

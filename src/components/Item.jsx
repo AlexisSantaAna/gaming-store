@@ -16,7 +16,7 @@ const Item = ({ product }) => {
         }
     }, [])
 
-    
+
 
     return (
         <>
@@ -33,17 +33,19 @@ const Item = ({ product }) => {
                                 <h5 className="card-title mb-3" data-atropos-offset="0">{product.name}</h5>
                                 <div>
                                     <p className="card-price mb-1" data-atropos-offset="-6">${product.price}</p>
+                                    <Link to={"/item/" + product.id} className='vermas-btn' data-atropos-offset="6">Ver más <i class="fas fa-arrow-right fa-sm"></i></Link>
                                 </div>
                             </div>
                         </div>
                     </Atropos>
                     :
                     <div className="card h-100">
-                        <Link to={"/item/" + product.id} className="text-center card-img d-flex justify-content-center"><img src={product.img} className="card-img-top shop-img" alt="product" data-atropos-offset="6" /></Link>
+                        <Link to={"/item/" + product.id} className="text-center card-img d-flex justify-content-center"><img src={product.img} className="card-img-top shop-img" alt="product"/></Link>
                         <div className="card-body text-center">
-                            <h5 className="card-title mb-3" data-atropos-offset="0">{product.name}</h5>
+                            <h5 className="card-title mb-3">{product.name}</h5>
                             <div>
-                                <p className="card-price mb-1" data-atropos-offset="-6">${product.price}</p>
+                                <p className="card-price mb-1">${product.price}</p>
+                                <Link to={"/item/" + product.id} className='vermas-btn'>Ver más <i class="fas fa-arrow-right fa-sm"></i></Link>
                             </div>
                         </div>
                     </div>}
