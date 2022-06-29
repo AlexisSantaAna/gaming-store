@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { CartContext } from '../context/CartContext'
 import Swal from 'sweetalert2'
-import { Link } from 'react-router-dom'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 
 const CartCheckout = () => {
@@ -20,7 +19,8 @@ const CartCheckout = () => {
     const db = getFirestore()
     const orderCollection = collection(db, 'orders')
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         //Objeto que subo a la base de datos
         const order = {
             buyer: { name, lastName, email, phone },
@@ -42,6 +42,13 @@ const CartCheckout = () => {
         });
     }
 
+    const handleSubmit = () => {
+        setName('')
+        setLastName('')
+        setEmail('')
+        setPhone('')
+    }
+
     return (
         <div className='col-4 container p-4'>
             <h2 className='text-center py-5 main-title animate__animated animate__bounceInLeft'>Resumen del pedido</h2>
@@ -50,30 +57,31 @@ const CartCheckout = () => {
                 <p><b>${getItemPrice()}</b></p>
             </div>
             <form>
-                <div class="mb-2">
-                    <label for="name" class="form-label">NOMBRE</label>
-                    <input type="name" class="form-control" onChange={(e) => setName(e.target.value)} id="name" placeholder='Ingresa tu nombre' />
+                <div className="mb-2">
+                    <label htmlFor="name" className="form-label">NOMBRE</label>
+                    <input type="name" className="form-control" onChange={e => setName(e.target.value)} id="name" value={name} required placeholder='Ingresa tu nombre' />
                 </div>
-                <div class="mb-2">
-                    <label for="lastname" class="form-label">APELLIDO</label>
-                    <input type="lastname" class="form-control" onChange={(e) => setLastName(e.target.value)} id="lastname" placeholder='Ingresa tu apellido' />
+                <div className="mb-2">
+                    <label htmlFor="lastname" className="form-label">APELLIDO</label>
+                    <input type="lastname" className="form-control" onChange={e => setLastName(e.target.value)} id="lastname" value={lastName} required placeholder='Ingresa tu apellido' />
                 </div>
-                <div class="mb-2">
-                    <label for="email" class="form-label">EMAIL</label>
-                    <input type="email" class="form-control" onChange={(e) => setEmail(e.target.value)} id="email" placeholder='Ingresa tu email' />
+                <div className="mb-2">
+                    <label htmlFor="email" className="form-label">EMAIL</label>
+                    <input type="email" className="form-control" onChange={e => setEmail(e.target.value)} id="email" value={email} required placeholder='Ingresa tu email' />
                 </div>
-                <div class="mb-2">
-                    <label for="phone" class="form-label">TELEFONO</label>
-                    <input type="phone" class="form-control" onChange={(e) => setPhone(e.target.value)} id="phone" placeholder='Ingresa tu teléfono' />
+                <div className="mb-2">
+                    <label htmlFor="phone" className="form-label">TELEFONO</label>
+                    <input type="phone" className="form-control" onChange={e => setPhone(e.target.value)} id="phone" value={phone} required placeholder='Ingresa tu teléfono' />
                 </div>
                 <div className='d-flex justify-content-between'>
                     <p><b>PRECIO TOTAL</b></p>
                     <p><b>${getItemPrice()}</b></p>
                 </div>
-                <Link to={'/cart'}><button className='btn btn-secondary container mb-4' onClick={() => {
-                    handleClick()
+                <button className='btn btn-secondary container mb-4' type='submit' onClick={(e) => {
+                    handleClick(e)
                     emptyCart()
-                }}>Proceder con el pago</button></Link>
+                    handleSubmit()
+                }}>Proceder con el pago</button>
             </form>
         </div>
     )
