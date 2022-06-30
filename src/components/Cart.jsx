@@ -100,7 +100,7 @@ const Cart = () => {
 
                 </section>
                 :
-                <section className='container d-flex'>
+                <section className='container d-flex empty-cart-container'>
                     <div className='col-12 p-4 text-center'>
                         <h2 className='py-5 main-title animate__animated animate__bounceInLeft'>Carrito de compras</h2>
                         <p>NO HAY PRODUCTOS</p>

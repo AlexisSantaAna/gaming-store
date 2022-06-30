@@ -39,3 +39,7 @@
 .delete-btn:hover {
     color: #e30428;
 }
+
+.empty-cart-container {
+    min-height: 80vh;
+}
