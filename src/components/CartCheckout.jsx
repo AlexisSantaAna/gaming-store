@@ -60,11 +60,11 @@ const CartCheckout = () => {
   };
 
   return (
-    <div className="col-4 container p-4">
-      <h2 className="text-center py-5 main-title animate__animated animate__bounceInLeft">
+    <div className="col-12 col-xl-4 container py-4 p-md-4">
+      <h2 className="text-center my-4 my-md-5 main-title animate__animated animate__bounceInLeft">
         Resumen del pedido
       </h2>
-      <div className="d-flex justify-content-between animate__animated animate__fadeIn">
+      <div className="d-flex justify-content-between animate__animated animate__zoomInUp">
         <p>
           <b>{getItemQty()} PRODUCTOS</b>
         </p>

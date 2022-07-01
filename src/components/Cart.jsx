@@ -37,23 +37,23 @@ const Cart = () => {
             </Helmet>
 
             {cart.length > 0 ?
-                <section className='container d-flex'>
-                    <div className='col-8 p-4'>
-                        <h2 className='text-center py-5 main-title animate__animated animate__bounceInLeft'>Carrito de compras</h2>
-                        <div className='text-center d-flex justify-content-center align-items-center animate__animated animate__fadeIn'>
-                            <div className='row container justify-content-center align-items-center'>
+                <section className='container cart-section'>
+                    <div className='col-12 col-xl-8 py-4 p-md-4'>
+                        <h2 className='text-center my-4 my-md-5 main-title animate__animated animate__bounceInLeft'>Carrito de compras</h2>
+                        <div className='text-center d-flex justify-content-center align-items-center animate__animated animate__zoomInUp'>
+                            <div className='row container cart-container justify-content-center align-items-center'>
                                 <div className='col-2'></div>
-                                <div className='col-4 text-center'>
-                                    <p className='h6'>PRODUCTOS</p>
+                                <div className='col-5 text-center cart-text'>
+                                    <h6>PRODUCTOS</h6>
                                 </div>
-                                <div className='col-2 text-center'>
-                                    <p className='h6'>CANTIDAD</p>
+                                <div className='col-1 text-center cart-text'>
+                                    <h6>CANT</h6>
                                 </div>
-                                <div className='col-2 text-center'>
-                                    <p className='h6'>PRECIO</p>
+                                <div className='col-2 text-center cart-text'>
+                                    <h6>PRECIO</h6>
                                 </div>
-                                <div className='col-2 text-center'>
-                                    <p className='h6'>TOTAL</p>
+                                <div className='col-2 text-center cart-text'>
+                                    <h6>TOTAL</h6>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ const Cart = () => {
                             <>
                                 <div key={index} className='text-center d-flex justify-content-center align-items-center py-3 item-cart'>
                                     <div className='row container justify-content-center align-items-center cart-container animate__animated animate__zoomInUp'>
-                                        <div className='col-6 d-flex'>
+                                        <div className='col-7 d-flex'>
                                             <div className='row d-flex'>
                                                 <div className='col-4 cart-img-container'>
                                                     <img src={e.img} className='cart-img'></img>
@@ -73,13 +73,13 @@ const Cart = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='col-2'>
+                                        <div className='col-1 cart-text'>
                                             <p className='text-center fw-bold'>{e.qty}</p>
                                         </div>
-                                        <div className='col-2'>
+                                        <div className='col-2 cart-text'>
                                             <p className='text-center fw-bold'>${e.price}</p>
                                         </div>
-                                        <div className='col-2'>
+                                        <div className='col-2 cart-text'>
                                             <p className='text-center fw-bold'>${e.qty * e.price}</p>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ const Cart = () => {
                                 </div>
                             </>
                         ))}
-                        <div className='text-center pt-2 pb-5 d-flex justify-content-end align-items-center container'>
+                        <div className='text-center pt-2 pb-2 pb-md-5 d-flex justify-content-end align-items-center container'>
                             <button className='btn btn-secondary btn-sm mx-2 animate__animated animate__zoomInUp' onClick={() => {
                                 emptyCart()
                                 emptyCartAlert()
