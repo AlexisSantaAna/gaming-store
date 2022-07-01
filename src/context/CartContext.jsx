@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 const MyProvider = ({ children }) => {
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cartItems')))
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cartItems')) ?? [])
 
   //Metodo Some - ItemDetail - Si el producto a agregar ya está en el carrito o no (true/false)
   const isInCart = (id) => {
