@@ -7,21 +7,21 @@ import { useForm } from "react-hook-form";
 import "./cart.css";
 
 const CartCheckout = () => {
+  //useForm
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+
   //Datos tomados de CartContext
   const { cart, getItemPrice, getItemQty, emptyCart } = useContext(CartContext);
+
   //Estados y variables utilizadas para crear el formulario del cliente y el ticket
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  //ID Ticket de compra
-  const [idCompra, setIdCompra] = useState("");
 
   //Cargamos los datos de la venta en Firestore
   const db = getFirestore();
@@ -43,18 +43,31 @@ const CartCheckout = () => {
       total: getItemPrice(),
     };
 
+    let idCompra2;
+
     addDoc(orderCollection, order).then(({ id }) => {
-      setIdCompra(id);
+      return idCompra2 = id;
     });
 
     //Info que muestro en el sitio al cliente
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      iconColor: "#00A300",
-      title: `Gracias por su compra!\nHa comprado ${getItemQty()} productos\n`,
-      showConfirmButton: true,
-    });
+
+    setTimeout(() => {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        iconColor: "#00A300",
+        title: `Gracias por su compra!\nTicket nº ${idCompra2}`,
+        html:
+          "<pre>" +
+          `Nombre: ${order.buyer.name}\nApellido: ${
+            order.buyer.lastName
+          }\nEmail: ${
+            order.buyer.email
+          }\n\nHa comprado con éxito ${getItemQty()} productos!` +
+          "</pre>",
+        showConfirmButton: true,
+      });
+    }, 1000);
 
     emptyCart();
   };
