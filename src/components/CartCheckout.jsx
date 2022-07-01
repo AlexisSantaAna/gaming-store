@@ -4,6 +4,7 @@ import { CartContext } from "../context/CartContext";
 import Swal from "sweetalert2";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useForm } from "react-hook-form";
+import "./cart.css";
 
 const CartCheckout = () => {
   const {
@@ -25,8 +26,8 @@ const CartCheckout = () => {
   //Cargamos los datos de la venta en Firestore
   const db = getFirestore();
   const orderCollection = collection(db, "orders");
- 
-  const onSubmit = (data) => {        
+
+  const onSubmit = (data) => {
     const userData = {
       name: data.name,
       lastName: data.lastname,
@@ -34,28 +35,28 @@ const CartCheckout = () => {
       phone: data.phone,
     };
 
-    const {name, lastName, email, phone} = userData
+    const { name, lastName, email, phone } = userData;
 
     const order = {
-        buyer: { name, lastName, email, phone },
-        items: cart,
-        total: getItemPrice(),
-      };
-  
-      addDoc(orderCollection, order).then(({ id }) => {
-        setIdCompra(id);
-      });
-  
-      //Info que muestro en el sitio al cliente
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        iconColor: "#00A300",
-        title: `Gracias por su compra!\nHa comprado ${getItemQty()} productos\n`,
-        showConfirmButton: true,
-      });
+      buyer: { name, lastName, email, phone },
+      items: cart,
+      total: getItemPrice(),
+    };
 
-      emptyCart()
+    addDoc(orderCollection, order).then(({ id }) => {
+      setIdCompra(id);
+    });
+
+    //Info que muestro en el sitio al cliente
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      iconColor: "#00A300",
+      title: `Gracias por su compra!\nHa comprado ${getItemQty()} productos\n`,
+      showConfirmButton: true,
+    });
+
+    emptyCart();
   };
 
   return (
@@ -63,7 +64,7 @@ const CartCheckout = () => {
       <h2 className="text-center py-5 main-title animate__animated animate__bounceInLeft">
         Resumen del pedido
       </h2>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between animate__animated animate__fadeIn">
         <p>
           <b>{getItemQty()} PRODUCTOS</b>
         </p>
@@ -71,115 +72,143 @@ const CartCheckout = () => {
           <b>${getItemPrice()}</b>
         </p>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-2">
-          <label htmlFor="name" className="form-label">
-            NOMBRE
-          </label>
-          <input
-            type="name"
-            className="form-control"
-            onChange={(e) => setName(e.target.value)}
-            id="name"
-            placeholder="Ingresa tu nombre"
-            {...register("name", {
-              required: {
-                value: true,
-                maxLength: 20,
-                message: "Ingrese un nombre",
-              },
-              pattern: {
-                value: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
-                message: "Ingrese un nombre valido",
-              },
-            })}
-          />
-          {errors.name && <p>{errors.name.message}</p>}
-        </div>
-        <div className="mb-2">
-          <label htmlFor="lastname" className="form-label">
-            APELLIDO
-          </label>
-          <input
-            type="lastname"
-            className="form-control"
-            onChange={(e) => setLastName(e.target.value)}
-            id="lastname"
-            placeholder="Ingresa tu apellido"
-            {...register("lastname", {
-              required: {
-                value: true,
-                message: "Ingrese un apellido",
-              },
-              pattern: {
-                value: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
-                message: "Ingrese un apellido valido",
-              },
-            })}
-          />
-          {errors.lastname && <p>{errors.lastname.message}</p>}
-        </div>
-        <div className="mb-2">
-          <label htmlFor="email" className="form-label">
-            EMAIL
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            onChange={(e) => setEmail(e.target.value)}
-            id="email"
-            placeholder="Ingresa tu email"
-            {...register("email", {
-              required: {
-                value: true,
-                maxLength: 20,
-                message: "Ingrese un email",
-              },
-              pattern: {
-                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-                message: "Ingrese un email valido",
-              },
-            })}
-          />
-          {errors.email && <p>{errors.email.message}</p>}
-        </div>
-        <div className="mb-2">
-          <label htmlFor="phone" className="form-label">
-            TELEFONO
-          </label>
-          <input
-            type="phone"
-            className="form-control"
-            onChange={(e) => setPhone(e.target.value)}
-            id="phone"
-            placeholder="Ingresa tu teléfono"
-            {...register("phone", {
-              required: {
-                value: true,
-                maxLength: 20,
-                message: "Ingrese un telefono",
-              },
-              pattern: {
-                value:
-                  /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/d,
-                message: "Ingrese un telefono valido",
-              },
-            })}
-          />
-          {errors.phone && <p>{errors.phone.message}</p>}
-        </div>
-        <div className="d-flex justify-content-between">
-          <p>
-            <b>PRECIO TOTAL</b>
-          </p>
-          <p>
-            <b>${getItemPrice()}</b>
-          </p>
-        </div>
-        <button className="btn btn-secondary container mb-4" type="submit">
-          Proceder con el pago
-        </button>
-      </form>
+      <div className="cart-container p-4 animate__animated animate__zoomInUp">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-1">
+            <label htmlFor="name" className="form-label">
+              <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                NOMBRE
+              </b>
+            </label>
+            <input
+              type="name"
+              className="form-control"
+              onChange={(e) => setName(e.target.value)}
+              id="name"
+              placeholder="Ingresa tu nombre"
+              {...register("name", {
+                required: {
+                  value: true,
+                  maxLength: 20,
+                  message: "Ingrese un nombre",
+                },
+                pattern: {
+                  value:
+                    /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
+                  message: "Ingrese un nombre válido",
+                },
+              })}
+            />
+            {errors.name && (
+              <h6 style={{ color: "#e30428" }} className="pt-1">
+                {errors.name.message}
+              </h6>
+            )}
+          </div>
+          <div className="mb-1">
+            <label htmlFor="lastname" className="form-label">
+              <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                APELLIDO
+              </b>
+            </label>
+            <input
+              type="lastname"
+              className="form-control"
+              onChange={(e) => setLastName(e.target.value)}
+              id="lastname"
+              placeholder="Ingresa tu apellido"
+              {...register("lastname", {
+                required: {
+                  value: true,
+                  message: "Ingrese un apellido",
+                },
+                pattern: {
+                  value:
+                    /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i,
+                  message: "Ingrese un apellido válido",
+                },
+              })}
+            />
+            {errors.lastname && (
+              <h6 style={{ color: "#e30428" }} className="pt-1">
+                {errors.lastname.message}
+              </h6>
+            )}
+          </div>
+          <div className="mb-1">
+            <label htmlFor="email" className="form-label">
+              <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                EMAIL
+              </b>
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              onChange={(e) => setEmail(e.target.value)}
+              id="email"
+              placeholder="Ingresa tu email"
+              {...register("email", {
+                required: {
+                  value: true,
+                  maxLength: 20,
+                  message: "Ingrese un email",
+                },
+                pattern: {
+                  value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+                  message: "Ingrese un email válido",
+                },
+              })}
+            />
+            {errors.email && (
+              <h6 style={{ color: "#e30428" }} className="pt-1">
+                {errors.email.message}
+              </h6>
+            )}
+          </div>
+          <div className="mb-1">
+            <label htmlFor="phone" className="form-label">
+              <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                TELEFONO
+              </b>
+            </label>
+            <input
+              type="phone"
+              className="form-control"
+              onChange={(e) => setPhone(e.target.value)}
+              id="phone"
+              placeholder="Ingresa tu teléfono"
+              {...register("phone", {
+                required: {
+                  value: true,
+                  maxLength: 20,
+                  message: "Ingrese un teléfono",
+                },
+                pattern: {
+                  value:
+                    /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/d,
+                  message: "Ingrese un teléfono válido",
+                },
+              })}
+            />
+            {errors.phone && (
+              <h6 style={{ color: "#e30428" }} className="pt-1">
+                {errors.phone.message}
+              </h6>
+            )}
+          </div>
+          <div className="d-flex justify-content-between">
+            <p>
+              <b>PRECIO TOTAL</b>
+            </p>
+            <p>
+              <b>${getItemPrice()}</b>
+            </p>
+          </div>
+          <button className="btn btn-secondary container mb-4" type="submit">
+            Proceder con el pago
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

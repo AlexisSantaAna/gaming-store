@@ -40,7 +40,7 @@ const Cart = () => {
                 <section className='container d-flex'>
                     <div className='col-8 p-4'>
                         <h2 className='text-center py-5 main-title animate__animated animate__bounceInLeft'>Carrito de compras</h2>
-                        <div className='text-center d-flex justify-content-center align-items-center'>
+                        <div className='text-center d-flex justify-content-center align-items-center animate__animated animate__fadeIn'>
                             <div className='row container justify-content-center align-items-center'>
                                 <div className='col-2'></div>
                                 <div className='col-4 text-center'>
@@ -61,7 +61,7 @@ const Cart = () => {
                         {cart.map((e, index) => (
                             <>
                                 <div key={index} className='text-center d-flex justify-content-center align-items-center py-3 item-cart'>
-                                    <div className='row container justify-content-center align-items-center cart-container'>
+                                    <div className='row container justify-content-center align-items-center cart-container animate__animated animate__zoomInUp'>
                                         <div className='col-6 d-flex'>
                                             <div className='row d-flex'>
                                                 <div className='col-4 cart-img-container'>
@@ -88,7 +88,7 @@ const Cart = () => {
                             </>
                         ))}
                         <div className='text-center pt-2 pb-5 d-flex justify-content-end align-items-center container'>
-                            <button className='btn btn-secondary btn-sm mx-2' onClick={() => {
+                            <button className='btn btn-secondary btn-sm mx-2 animate__animated animate__zoomInUp' onClick={() => {
                                 emptyCart()
                                 emptyCartAlert()
                             }}>Vaciar carrito</button>
