@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+#  Gaming Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## E-commerce Project in React, using Bootstrap, useState, useEffect, useForm, ContextAPI, Helmet, Firebase, LocalStorage to save the cart & more
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### Demo: [Gaming Store E-commerce](https://alexissantaana-gaming-store.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# App Usage
+![desktop](https://user-images.githubusercontent.com/96957625/176984752-b8f6b066-2c48-4354-b3bf-05dd4fceb306.gif)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### App in Mobile
+##![mobile](https://user-images.githubusercontent.com/96957625/176984664-9a4025ee-28fe-4809-8d9b-c1890d295f28.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+### Initialize Project
+To start this project, you must clone or fork the repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    git clone https://github.com/AlexisSantaAna/gaming-store.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once the repository is cloned, it should be moved to the created folder
 
-### `npm run eject`
+    cd gaming-store
+    
+Already positioned in the cloned folder, you will need to install the dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    npm install
+    
+Once the dependencies are installed, run the following command
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    npm start
+    
+    
+---
+### Main libraries used in this project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| library                                                          | used                      |
+| ---------------------------------------------------------------- | ------------------------- |
+| [React Router DOM V6](https://reactrouter.com/)                  | Router lib for React      |
+| [React Hook Form](https://react-hook-form.com/)                  | React Form Library        |
+| [React Helmet](https://github.com/nfl/react-helmet)              | SEO Lib in React          |
+| [Bootstrap](https://getbootstrap.com/)                          | CSS Framework             |
+| [Sweet Alert2](https://sweetalert2.github.io/l)                  | Sweet Alert2              |
+| [Atropos](https://atroposjs.com/)        | React 3D Effect Library       |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Pending tasks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Create users auth
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Author: Alexis Santa Ana
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Contact](mailto:ibanez2112@hotmail.com)
+- [GitHub](https://github.com/AlexisSantaAna)
+- [Linkedin](https://www.linkedin.com/in/alexis-santa-ana-9176b622b/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+---
+This project was developed for the React Js course on the CoderHouse platform [![coderhouse](https://emprelatam.com/wp-content/uploads/2019/10/logos-coderhouse-01.png)](https://www.coderhouse.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
