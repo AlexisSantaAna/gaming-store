@@ -43,20 +43,12 @@ const CartCheckout = () => {
       total: getItemPrice(),
     };
 
-    let idCompra2;
-
-    addDoc(orderCollection, order).then(({ id }) => {
-      return idCompra2 = id;
-    });
-
-    //Info que muestro en el sitio al cliente
-
-    setTimeout(() => {
+    addDoc(orderCollection, data).then((docRef) => {      
       Swal.fire({
         position: "center",
         icon: "success",
         iconColor: "#00A300",
-        title: `Gracias por su compra!\nTicket nº ${idCompra2}`,
+        title: `Gracias por su compra!\nTicket nº ${docRef.id}`,
         html:
           "<pre>" +
           `Nombre: ${order.buyer.name}\nApellido: ${
@@ -67,7 +59,9 @@ const CartCheckout = () => {
           "</pre>",
         showConfirmButton: true,
       });
-    }, 1000);
+    });
+
+    //Info que muestro en el sitio al cliente
 
     emptyCart();
   };
