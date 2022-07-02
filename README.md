@@ -1,6 +1,6 @@
 #  Gaming Store
 
-## E-commerce Project in React, using Bootstrap, useState, useEffect, useForm, ContextAPI, Helmet, Firebase, LocalStorage to save the cart & more
+## E-commerce Project in React, using Bootstrap, useState, useEffect, useForm, ContextAPI, Helmet, Firebase, LocalStorage to save the cart, Mobile Responsive Design & more
 
 
 
