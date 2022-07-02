@@ -43,12 +43,12 @@ const CartCheckout = () => {
       total: getItemPrice(),
     };
 
-    addDoc(orderCollection, data).then((docRef) => {      
+    addDoc(orderCollection, order).then(({ id }) => {
       Swal.fire({
         position: "center",
         icon: "success",
         iconColor: "#00A300",
-        title: `Gracias por su compra!\nTicket nº ${docRef.id}`,
+        title: `Gracias por su compra!\nTicket nº ${id}`,
         html:
           "<pre>" +
           `Nombre: ${order.buyer.name}\nApellido: ${
