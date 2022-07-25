@@ -56,7 +56,7 @@ Once the dependencies are installed, run the following command
 
 - [Contact](mailto:ibanez2112@hotmail.com)
 - [GitHub](https://github.com/AlexisSantaAna)
-- [Linkedin](https://www.linkedin.com/in/alexis-santa-ana-9176b622b/)
+- [Linkedin](https://www.linkedin.com/in/alexis-leandro-santa-ana/)
 
 
 
