@@ -47,7 +47,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='text-center py-1'>
-                        <p className='text-footer'>© 2022 Gaming Store • Desarrollado por <a href="https://www.linkedin.com/in/alexis-santa-ana/">Alexis Santa Ana</a></p>
+                        <p className='text-footer'>© 2022 Gaming Store • Desarrollado por <a href="https://www.linkedin.com/in/alexis-leandro-santa-ana/">Alexis Santa Ana</a></p>
                     </div>
 
                 </div>
